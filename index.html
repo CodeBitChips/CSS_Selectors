@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+     <!-- Sample Div -->
+    <!-- <div>
+        <div class="left"> Left Div </div>
+        <div class='right'> Right Div </div>
+    </div> -->
+
+    
+    <h1>CSS Selectors Cheatsheet</h1>
+    <br> <br>
+
+
+    <!-- 1. Elements Selectors -->
+    <div class="each-selector">
+        <h2>Element Selectors</h2>
+        <div id="one">
+            <div class="left"> 
+                <h2> Hello Red H1</h2>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        h2 {
+                            color: red;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="two">
+            <div class="left"> 
+                <h2 class="intro"> This is the introduction to css selectors</h2>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        .intro {
+                            background-color: yellow;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="three">
+            <div class="left"> 
+                <h2 class="name"> Adeel Asghar</h2>
+                &nbsp; &nbsp; &nbsp;
+                <h2 class="name adjective"> Adeel Asghar, Nice Person</h2>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        .name.adjective {
+                            background-color: blue;
+                          }
+                        </code>
+                    </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="four">
+            <h4>Selects all elements with an element (here class) <span style="font-family: cursive;">noun-and-verb</span> that is a descendant of an element <span style="font-family: cursive">usage</span></h4>
+            <div class="left">
+                <div class="noun-and-verb">
+                    <h2 class="usage"> Adeel Asghar goes to school</h2>
+                </div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        .noun-and-verb .usage {
+                            color: blue;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="four">
+            <h4> # & *</h4>
+            <div class="left">
+                <h4 class="usage"> # (id) works just like class selector. </h4>
+                <h4 class="usage"> * (universal) selector selects all elements on the page. </h4>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        #id
+                        OR
+                        * {
+                            ---
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="four">
+            <h4>p Tag</h4>
+            <div class="left">
+                <div class="noun-and-verb">
+                    <h2>p-Tag</h2>
+                </div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                         p {
+
+                         } selects all p-tag elements
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="five">
+            <h4>Selecting a Tag with a certain class or id</h4>
+            <div class="left">
+                <div class="intro">
+                    <p>My name is Donald.</p>
+                </div>
+                &nbsp; &nbsp; &nbsp;
+                <p class="intro">My name is Donald.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p.intro {
+                            color: green;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="six">
+            <h4>Selecting all div and p elements</h4>
+            <div class="left">
+                <h4> My name is Donald.</h4>
+                    &nbsp; &nbsp; &nbsp;
+                <p class="intro">My name is Donald.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code style="color: black">
+                        div, p {
+                            color: orange;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="seven">
+            <h4>Selects all p elements inside div elements</h4>
+            <div class="left">
+                <div>
+                    <h4>My name is Donald</h4>
+                        &nbsp; &nbsp; &nbsp;
+                    <p>I live in Duckburg.</p>
+                  </div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        div p {
+                            color: rgb(47, 133, 133)
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="eight">
+            <h4>Selects all p elements where the parent is a div element</h4>
+            <div class="left">
+                <div>
+                    <p>My name is Donald</p>
+                </div>
+                &nbsp; &nbsp; &nbsp;
+                <div>
+                    <h4>
+                        <p>I live in Duckburg.</p>
+                    </h4>
+                </div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        div > p {
+                            color: yellow
+                          }
+                        </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="nine">
+            <h4>Selects the first p element that is placed immediately after div elements</h4>
+            <div class="left">
+                <h4>My name is Donald</h4>
+                &nbsp; &nbsp; &nbsp;
+                <p>I live in Duckburg.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        div + h4 {
+                            color: green
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="eleven">
+            <h4>Selects all elements with a target attribute</h4>
+            <div class="left">
+                <a href="https://www.w3schools.com">w3schools.com</a>   &nbsp; &nbsp; &nbsp;
+                <a href="http://www.disney.com" target="_blank">disney.com</a>  &nbsp; &nbsp; &nbsp;
+                <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>  &nbsp; &nbsp; &nbsp;
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        a[target] {
+                            color: brown
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twelve">
+            <h4>Selects all elements with target="_blank"</h4>
+            <div class="left">
+                <a href="http://www.disney.com" target="_blank">disney.com</a>  &nbsp; &nbsp; &nbsp;
+                <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>  &nbsp; &nbsp; &nbsp;
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        a[target=_blank] {
+                            color: brown
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="thirteen">
+            <h4>Selects all elements with a title attribute containing the word "flower"</h4>
+            <div class="left">
+                <img src="http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/debris_blend.png" title="klematis aestroids" width="100" height="100">&nbsp; &nbsp; &nbsp;
+                <img src="http://commondatastorage.googleapis.com/codeskulptor-assets/lathrop/nebula_blue.s2014.png" title="blue nebula" width="100" height="100">&nbsp; &nbsp; &nbsp;
+                <img src="http://codeskulptor-demos.commondatastorage.googleapis.com/GalaxyInvaders/back02.jpg" title="earth landscape" width="100" height="100">
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        [title~=nebula] {
+                            border: 5px solid yellow;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="forteen">
+            <h4>Selects every <a> element whose href attribute value begins with "https"</h4>
+            <div class="left">
+                <a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>  &nbsp; &nbsp; &nbsp;
+                <a href="https://www.wikipedia.org" target="_top">wikipedia.org</a>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        a[href^="https"] {
+                            color: brown;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="fifteen">
+            <h4>Selects every <a> element whose href attribute value ends with ".pdf"</h4>
+            <div class="left">
+                <a href='document.pdf'>PDF Link</a>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        div[href$=".pdf"] {
+                            color: red;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="sixteen">
+            <h4>Selects every <a> element whose href attribute value contains the substring "w3schools OR class having substring "test"</h4>
+            <div class="left">
+                <div class="first_test">The first div element.</div>
+                <div class="second">The second div element.</div>
+                <div class="test">The third div element.</div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        div[class*="test"] {
+                            color: red;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="seventeen">
+            <h4>Insert something after the content of each p elementk</h4>
+            <div class="left">
+                <p>My name is Donald</p> &nbsp; &nbsp; &nbsp;
+                <p>I live in Ducksburg</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p::after { 
+                            content: " - Full Stop";
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="eightteen">
+            <h4>Insert something before the content of each p element</h4>
+            <div class="left">
+                <p>My name is Donald</p> &nbsp; &nbsp; &nbsp;
+                <p>I live in Ducksburg</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p::before {
+                            content: " Read this -";
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="nineteen">
+            <h4>Selects every checked input element</h4>
+            <div class="left">
+                <form action="">
+                    <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+                    <input type="radio" value="female" name="gender"> Female<br>
+                    <input type="checkbox" checked="checked" value="Bike"> I have a bike<br>
+                    <input type="checkbox" value="Car"> I have a car 
+                </form>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        input:checked {
+                            height: 20px;
+                            width: 20px;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twenty">
+            <h4>Selects the default input element</h4>
+            <div class="left">
+                <form action="">
+                    <input type="radio" name="gender" value="male" checked> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Other
+                  </form>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        input:default {
+                            box-shadow: 0 0 1px 1px red;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentyone">
+            <h4>Selects every disabled or enabled input element</h4>
+            <div class="left">
+                <form action="">
+                    First name: <input type="text" value="Mickey"><br>
+                    Last name: <input type="text" value="Mouse"><br>
+                    Country: <input type="text" disabled="disabled" value="Disneyland">
+                </form>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        input[type=text]:enabled {
+                            background: #ffff00;
+                        }
+                        input[type=text]:disabled {
+                            background: #dddddd;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentytwo">
+            <h4>First Child. Similar, last-child</h4>
+            <div class="left">
+                <p>This paragraph is the first child.</p>
+                <h4>Welcome to My Homepage</h4>
+                <p>This paragraph is not first child</p>
+
+                <div>
+                <p>This paragraph is first child of (div).</p>
+                <p>This para is not first child ofparent.</p>
+                </div>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p:first-child {
+                            background-color: yellow;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentythree">
+            <h4>Selects the first letter of every p element</h4>
+            <div class="left">
+                <p>My name is Donald.</p>
+                <p>I live in Duckburg.</p>
+                <p>My best friend is Mickey.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p::first-letter {
+                            font-size: 200%;
+                            color: #8A2BE2;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentyfour">
+            <h4>Selects the first line of every p element</h4>
+            <div class="left">
+                <p>To stop the degradation of the planet's natural environment and to build a future in which humans live in harmony with nature, by; conserving the world's biological diversity, ensuring that the use of renewable natural resources is sustainable, and promoting the reduction of pollution and wasteful consumption.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p::first-line {
+                            background-color: yellow;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentyfive">
+            <h4>Selects the element that is in full-screen mode</h4>
+            <div class="left">
+                <button onclick="openFullscreen();">Open Fullscreen</button> &nbsp; &nbsp; &nbsp;
+                <button onclick="closeFullscreen();">Close Fullscreen</button>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        button {
+                            padding: 10px;
+                            font-size: 10px;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentysix">
+            <h4>Selects links on mouse over</h4>
+            <div class="left">
+                <a href="https://www.w3schools.com">w3schools.com</a> &nbsp; &nbsp; &nbsp;
+                <a href="https://www.wikipedia.org">wikipedia.org</a>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        a:hover {
+                            color: yellow;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentyseven">
+            <h4 style="color: black;">Selects every element that is not a p element</h4>
+            <div class="left">
+                <h4>This is a heading</h4>
+                <p>This is a paragraph.</p>
+                <p>This is another paragraph.</p>
+                <div>This is some text in a div element.</div>
+                <a href="https://www.w3schools.com" target="_blank">Link to W3Schools!</a>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code  style="color: black;">
+                        p {
+                            color: #000000;
+                          }
+                          :not(p) {
+                            color: #ff0000;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentyeight">
+            <h4>Selects every <p> element that is the second child of its parent</h4>
+            <div class="left">
+                <p>The first paragraph.</p> &nbsp; &nbsp; &nbsp;
+                <p>The second paragraph.</p> &nbsp; &nbsp; &nbsp;
+                <p>The third paragraph.</p> &nbsp; &nbsp; &nbsp;
+                <p>The fourth paragraph.</p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        p:nth-child(2) {
+                            background: red;
+                          }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    <div class="each-selector">
+        <div id="twentynine">
+            <h4>Selects the current active #news element (clicked on a URL containing that anchor name)</h4>
+            <div class="left">
+                <p><a href="#news1">Jump to New content 1</a></p> &nbsp; &nbsp; &nbsp;
+                <p><a href="#news2">Jump to New content 2</a></p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <p id="news1"><b>New content 1...</b></p>
+                <p id="news2"><b>New content 2...</b></p>
+            </div>
+            <div class='right'>
+                <pre>
+                    <code>
+                        :target {
+                            border: 2px solid #D4D4D4;
+                            background-color: #e5eecc;
+                        }
+                    </code>
+                </pre> 
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    <script src="main.js"></script>
+</body>
+</html>

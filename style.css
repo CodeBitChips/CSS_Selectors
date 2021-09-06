@@ -1,0 +1,192 @@
+.each-selector {
+    background-color: grey;
+    padding: 30px;
+    width: 90%;
+}
+.each-selector > h2 {
+    width: 20%;
+    padding: 20px;
+    background-color: black;
+    color: whitesmoke;
+}
+
+.left {
+    padding: 20px;
+    box-sizing: border-box;
+    height: 20vh;
+    display: flex;
+    float: left;
+    width: 50%;
+    background-color: rgb(238, 235, 235);
+}
+.right {
+    height: 20vh;
+    display: flex;
+    width: 50%;
+    background-color: rgb(179, 179, 179);
+}
+
+h4 {
+    padding-left: 5px;
+}
+
+/* Tags under Element Selectors */
+#one
+h2 {
+    color: red;
+}
+
+#two
+.intro {
+    background-color: yellow;
+}
+
+#three
+.name.adjective {
+    background-color: blue;
+}
+.name {
+    background-color: red;
+}
+
+#four
+.noun-and-verb .usage {
+    color: blue;
+}
+
+#five
+p.intro {
+    color: green;
+}
+
+#six
+div, p {
+    color: orange;
+}
+
+#eight
+div > p {
+    color: yellow
+}
+
+
+/* Not Working Right */
+#nine 
+div + h4 {
+    color: green !important
+}
+
+#ten 
+p ~ ul {
+    color: green
+}
+
+#eleven
+a[target] {
+    color: brown;
+}
+#twelve
+a[target=_blank] {
+    color: brown;
+}
+
+#thirteen
+[title~=nebula] {
+    border: 5px solid yellow;
+}
+
+#forteen
+a[href^="https"] {
+    color: brown;
+}
+
+#fifteen
+a[href$=".pdf"] {
+    color: red;
+  }
+
+#sixteen
+div[class*="test"] {
+    color: red;
+}
+
+#seventeen
+p::after { 
+    content: " - Full Stop";
+}
+
+#eightteen
+p::before {
+    content: " Read this -";
+}
+
+#nineteen
+input:checked {
+    height: 20px;
+    width: 20px;
+}
+
+#twenty
+input:default {
+    box-shadow: 0 0 1px 1px red;
+}
+
+#twentyone
+input[type=text]:enabled {
+    background: #ffff00;
+}
+  
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+#twentytwo
+p:first-child {
+    background-color: yellow;
+}
+
+#twentythree
+p::first-letter {
+    font-size: 200%;
+    color: #8A2BE2;
+}
+
+#twentyfour
+p::first-line {
+    background-color: yellow;
+}
+
+#twentyfive
+button {
+    padding: 10px;
+    font-size: 10px;
+}
+
+#twentysix
+a:hover {
+    color: yellow;
+}
+
+#twentyseven
+p {
+    color: #000000;
+}
+
+#twentyseven
+:not(p) {
+    color: #ff0000;
+}
+
+#twentyeight
+p:nth-child(2) {
+    color: red;
+  }
+
+#twentynine
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+
+
+
